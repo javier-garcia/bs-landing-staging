@@ -1,0 +1,176 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 2 version
+*/
+
+@font-face {
+  font-family: object-sans;
+  src: url(../fonts/ObjectSans-Thin.woff);
+}
+
+:root {
+  --color-stromboli: #365A48;
+  --color-laser: #C8AB6D;
+  --color-white-linen: #FBF6F0;
+  --font-forma-micro: forma-djr-micro, sans-serif;
+  --font-object-sans: object-sans; /*, sans-serif; */
+  --font-museo-slab: museo-slab, serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-object-sans);
+  background-color: var(--color-stromboli);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--color-white-linen);
+  text-align: center;
+  max-width: 745px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-image: url(../images/bg-white.svg);
+  background-position: center;
+  background-size: 230px 132px;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  max-width: 300px;
+  margin: 0 auto 30px;
+}
+
+main {
+  border-top: 2px solid #FBF6F0;
+  padding: 5px 0 15px;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--font-forma-micro);
+}
+
+.contact-info .contact-info__phone {
+  padding-right: 36px;
+  position: relative;
+}
+
+.contact-info .contact-info__phone::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-white-linen);
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contact-info a {
+  color: var(--color-white-linen);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  border-bottom: 1px solid var(--color-white-linen);
+}
+
+.company-sites-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.company-sites-links .company-sites-links__item {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  max-width: calc(50% - 13px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 639px) {
+  .company-sites-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .company-sites-links .company-sites-links__item {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.company-sites-links .company-sites-links__item h2 {
+  font-family: var(--font-museo-slab);
+  color: var(--color-laser);
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0 12px;
+}
+
+.company-sites-links .company-sites-links__item p {
+  margin: 0 0 21px;
+  letter-spacing: 0.04em;
+}
+
+
+.company-sites-links .company-sites-links__item a {
+  display: block;
+  color: var(--color-stromboli);
+  text-decoration: none;
+  background-color: var(--color-white-linen);
+  font-family: var(--font-forma-micro);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 20px 35px;
+  width: 243px;
+  margin: auto auto 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.company-sites-links .company-sites-links__item a:hover {
+  text-decoration: underline;
+}
