@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: object-sans;
-  src: url(../fonts/ObjectSans-Thin.woff);
+  src: url(../fonts/ObjectSans-Regular.woff);
 }
 
 :root {
@@ -57,6 +57,10 @@ header {
   margin: 0 auto 30px;
 }
 
+header .logo img {
+  max-width: 100%;
+}
+
 main {
   border-top: 2px solid #FBF6F0;
   padding: 5px 0 15px;
@@ -71,7 +75,6 @@ main {
           justify-content: center;
   font-family: var(--font-forma-micro);
 }
-
 .contact-info .contact-info__phone {
   padding-right: 36px;
   position: relative;
@@ -99,6 +102,24 @@ main {
 .contact-info a:hover {
   border-bottom: 1px solid var(--color-white-linen);
 }
+
+@media screen and (max-width: 639px) {
+  .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contact-info .contact-info__phone {
+    padding-right: 0;
+  }
+
+  .contact-info .contact-info__phone::before {
+    display: none;
+  }
+}
+
 
 .company-sites-links {
   display: -webkit-box;
